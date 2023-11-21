@@ -1,9 +1,10 @@
+import { StoryPoint } from "../api/models"
 import "./imageDisplay.css"
 
 interface ImageDisplayProps {
-    image: string
+    storyPoint: StoryPoint
 }
 
-export const ImageDisplay = ({image}: ImageDisplayProps) => {
-    return <div className="image-container">{image}</div>
+export const ImageDisplay = ({storyPoint}: ImageDisplayProps) => {
+    return <div className="image-container">{storyPoint?.image.url}</div>
 }

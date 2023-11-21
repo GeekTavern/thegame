@@ -5,19 +5,26 @@ import { TextDisplay } from './components/TextDisplay';
 import { ChoiceDisplay } from './components/ChoiceDisplay';
 import { ImageDisplay } from './components/ImageDisplay';
 import { useState } from 'react';
+import { StoryPoint } from './api/models';
+import { Route, Routes } from 'react-router-dom'
+import { GamePage } from './pages/GamePage';
+import { HomePage } from './pages/HomePage';
 
 function App() {
-  const [text, setText] = useState("Lorem ipsum");
-  const [choices, setChoices] = useState(["Choice A", "Choice B"]);
-  const [image, setImage] = useState("I'm an image");
+  const [storyPoint, setStoryPoint] = useState<StoryPoint>({
+    id: 1,
+    choices: [{id: 1, choice: "got to 2", destination: 2}],
+    image: {url: "my/image/url/1"},
+    story: { text: "some story"}
+})
 
 
   return (
-    <div>
-      <ImageDisplay image={image}/>
-      <TextDisplay text={text}/>
-      <ChoiceDisplay choices={choices}/>
-    </div>
+    <Routes>
+      <Route path='/' element= {<HomePage/>}/>
+      <Route path='/gamepage' element={
+      <GamePage storyPoint = {storyPoint} setStoryPoint={setStoryPoint}/>}/>
+    </Routes>
   );
 }
 

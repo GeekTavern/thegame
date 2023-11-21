@@ -1,9 +1,10 @@
+import { StoryPoint } from "../api/models"
 import "./textDisplay.css"
 
 interface TextDisplayProps {
-    text: string
+    storyPoint: StoryPoint
 }
 
-export const TextDisplay = ({text}: TextDisplayProps) => {
-    return <div className="text-container">{text}</div>
+export const TextDisplay = ({storyPoint}: TextDisplayProps) => {
+    return <div className="text-container">{storyPoint?.story.text}</div>
 }
