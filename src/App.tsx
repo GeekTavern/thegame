@@ -4,6 +4,7 @@ import { StoryPoint } from './api/models';
 import { Route, Routes } from 'react-router-dom';
 import { GamePage } from './pages/GamePage';
 import { HomePage } from './pages/HomePage';
+import SandboxPage from './pages/SandboxPage/SandboxPage';
 
 function App() {
   const [storyPoint, setStoryPoint] = useState<StoryPoint>({
@@ -22,6 +23,7 @@ function App() {
           <GamePage storyPoint={storyPoint} setStoryPoint={setStoryPoint} />
         }
       />
+      <Route path='/sandbox' element={<SandboxPage />}></Route>
     </Routes>
   );
 }
