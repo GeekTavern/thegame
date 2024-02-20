@@ -1,6 +1,7 @@
 @import '../../globalStyles/mixins.scss';
 
 .page-container {
+  @include container-desktop;
   background-color: black;
   height: 100vh;
   border: solid red;

@@ -3,7 +3,6 @@
 @mixin container-desktop() {
   max-width: $max-width-desktop;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   gap: 20px;
   margin: auto;
   margin-bottom: 40px;
@@ -32,4 +31,5 @@
   font-size: large;
   border-width: 8px;
   border-radius: 4px;
+  height: fit-content;
 }

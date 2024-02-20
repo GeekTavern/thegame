@@ -9,26 +9,15 @@ const SandboxPage = () => {
       <div className='box'>
         <TypeAnimation
           sequence={[
-            // Same substring at the start will only be typed out once, initially
-            'We produce food for Mice',
-            1000, // wait 1s before replacing "Mice" with "Hamsters"
-            'We produce food for Hamsters',
-            1000,
-            'We produce food for Guinea Pigs',
-            1000,
-            'We produce food for Chinchillas',
-            1000,
+            'You take a bold step into the void',
+            () => console.log('done typing!'),
           ]}
           wrapper='span'
           speed={50}
           style={{ fontSize: '2em', display: 'inline-block' }}
-          repeat={Infinity}
+          repeat={0}
           cursor={false}
         />
-        <p>
-          Once upon a time there was a lovely man who lived in the sea and liked
-          to play with other people's waste
-        </p>
       </div>
     </div>
   );
