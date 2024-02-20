@@ -2,8 +2,8 @@ import './App.css';
 import { useState } from 'react';
 import { StoryPoint } from './api/models';
 import { Route, Routes } from 'react-router-dom';
-import { GamePage } from './pages/GamePage';
-import { HomePage } from './pages/HomePage';
+import { GamePage } from './pages/GamePage/GamePage';
+import { HomePage } from './pages/HomePage/HomePage';
 import SandboxPage from './pages/SandboxPage/SandboxPage';
 
 function App() {

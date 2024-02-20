@@ -1,7 +1,7 @@
 @import '../../globalStyles/mixins.scss';
 
-.choice-box-container {
+.text-display-container {
   @include textBox;
-  width: 100px;
-  height: 40px;
+  padding: 20px;
+  margin: 20px;
 }

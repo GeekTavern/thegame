@@ -1,7 +1,7 @@
 import { getStoryPoint } from '../../api/api';
 import { StoryPoint } from '../../api/models';
-import './choiceDisplay.css';
-
+import './choiceDisplay.scss';
+import { ChoiceBox } from '../ChoiceBox';
 interface ChoiceDisplayProps {
   storyPoint: StoryPoint;
   setStoryPoint: Function;
@@ -21,17 +21,10 @@ export const ChoiceDisplay = ({
   }
 
   return (
-    <div className='choice-container'>
-      {storyPoint.choices.map((choice) => {
-        return (
-          <button
-            key={choice.id}
-            onClick={() => handleClick(choice.destination)}
-          >
-            {choice.choice}
-          </button>
-        );
-      })}
+    <div className='choice-display-container'>
+      <ChoiceBox />
+      <ChoiceBox />
+      <ChoiceBox />
     </div>
   );
 };

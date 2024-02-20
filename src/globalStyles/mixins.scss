@@ -2,8 +2,6 @@
 
 @mixin container-desktop() {
   max-width: $max-width-desktop;
-  display: grid;
-  gap: 20px;
   margin: auto;
   margin-bottom: 40px;
   padding-top: 60px;
@@ -15,11 +13,6 @@
   max-width: $max-width-mobile;
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 40px;
-  @content;
-}
-
-@mixin test-mixin() {
-  border: solid purple;
   @content;
 }
 
