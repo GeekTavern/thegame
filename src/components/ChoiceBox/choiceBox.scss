@@ -1,0 +1,5 @@
+@import '../../globalStyles/mixins.scss';
+
+import .choice-box-container {
+  @include textBox;
+}

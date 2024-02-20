@@ -1,5 +1,5 @@
-import { getStoryPoint } from '../api/api';
-import { StoryPoint } from '../api/models';
+import { getStoryPoint } from '../../api/api';
+import { StoryPoint } from '../../api/models';
 import './choiceDisplay.css';
 
 interface ChoiceDisplayProps {
