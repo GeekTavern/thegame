@@ -1,24 +1,17 @@
 export interface StoryPoint {
-    id: number
-    choices: Choice[]
-    image: Image
-    story: Story
+  id: number;
+  choices: Choice[];
+  image?: Image;
+  text: string;
 }
 
 export interface Choice {
-    id: number
-    choice: string
-    destination: number
+  choice: string;
+  destination: number;
 }
 
 export interface Image {
-    id?: number
-    name?: string
-    url: string
-
-}
-
-export interface Story {
-    id?: number
-    text: string
+  id?: number;
+  name?: string;
+  url: string;
 }

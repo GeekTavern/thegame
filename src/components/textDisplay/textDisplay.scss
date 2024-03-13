@@ -1,0 +1,11 @@
+@import '../../globalStyles/mixins.scss';
+
+.text-display-container {
+  @include textBox;
+  padding: 20px;
+  margin: 20px;
+
+  .choice:hover {
+    background-color: grey;
+  }
+}

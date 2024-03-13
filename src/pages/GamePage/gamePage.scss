@@ -1,0 +1,8 @@
+@import '../../globalStyles/variables.scss';
+@import '../../globalStyles/mixins.scss';
+
+.game-page-container {
+  @include container-desktop;
+  background-color: black;
+  height: 100vh;
+}
