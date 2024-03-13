@@ -1,5 +1,11 @@
 @import './variables.scss';
 
+@font-face {
+  font-family: 'joystixMonospace';
+  src: url('../../public/assets/fonts/joystix-monospace.otf') format('opentype');
+  /* You can also specify other font formats like woff, woff2, etc. */
+}
+
 @mixin container-desktop() {
   max-width: $max-width-desktop;
   margin: auto;
@@ -17,11 +23,12 @@
 }
 
 @mixin textBox() {
+  // font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'joystixMonospace', sans-serif;
   color: white;
   background-color: blue;
   border: solid grey;
-  font-family: Roboto;
-  font-size: large;
+  font-size: x-small;
   border-width: 8px;
   border-radius: 4px;
   height: fit-content;

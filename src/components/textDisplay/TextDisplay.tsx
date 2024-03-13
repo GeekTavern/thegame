@@ -1,26 +1,47 @@
+import { useLinkClickHandler } from 'react-router-dom';
 import { StoryPoint } from '../../api/models';
 import './textDisplay.scss';
-import { TypeAnimation } from 'react-type-animation';
+import { getStoryPoint, getStoryPointById } from '../../api/api';
+import { ReactTyped } from 'react-typed';
 
 interface TextDisplayProps {
   storyPoint: StoryPoint;
+  setStoryPoint: Function;
 }
 
-export const TextDisplay = ({ storyPoint }: TextDisplayProps) => {
+export const TextDisplay = ({
+  storyPoint,
+  setStoryPoint,
+}: TextDisplayProps) => {
+  const clickHandler = async (destination: number) => {
+    const newStoryPoint = await getStoryPointById(destination);
+
+    console.log(storyPoint);
+    if (newStoryPoint) {
+      setStoryPoint(newStoryPoint);
+    }
+  };
+
   return (
     <div className='text-display-container'>
-      <div className='box'>
-        <TypeAnimation
-          sequence={[
-            'You take a bold step into the void',
-            () => console.log('done typing!'),
-          ]}
-          wrapper='span'
-          speed={50}
-          style={{ fontSize: '2em', display: 'inline-block' }}
-          repeat={0}
-          cursor={false}
-        />
+      <div className='box'></div>
+
+      <div>
+        <ReactTyped strings={[storyPoint.text]}></ReactTyped>
+      </div>
+
+      <div className='choices-container'>
+        {storyPoint.choices.map((choice) => {
+          //actually no, this will be the api call
+          return (
+            <p
+              className='choice'
+              onClick={() => clickHandler(choice.destination)}
+            >
+              {choice.choice}
+            </p>
+          );
+        })}
       </div>
     </div>
   );

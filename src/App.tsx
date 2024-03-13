@@ -9,9 +9,9 @@ import SandboxPage from './pages/SandboxPage/SandboxPage';
 function App() {
   const [storyPoint, setStoryPoint] = useState<StoryPoint>({
     id: 1,
-    choices: [{ id: 1, choice: 'got to 2', destination: 2 }],
+    choices: [{ choice: 'got to 2', destination: 2 }],
     image: { url: 'my/image/url/1' },
-    story: { text: 'some story' },
+    text: 'some story',
   });
 
   return (

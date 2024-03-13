@@ -4,4 +4,8 @@
   @include textBox;
   padding: 20px;
   margin: 20px;
+
+  .choice:hover {
+    background-color: grey;
+  }
 }
