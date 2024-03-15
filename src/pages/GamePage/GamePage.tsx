@@ -1,5 +1,4 @@
 import { StoryPoint } from '../../api/models';
-import { ChoiceDisplay } from '../../components/ChoiceDisplay/ChoiceDisplay';
 import { ImageDisplay } from '../../components/imageDisplay/ImageDisplay';
 import { TextDisplay } from '../../components/TextDisplay/TextDisplay';
 import { InventoryToggle } from '../../components/InventoryToggle/InventoryToggle';
